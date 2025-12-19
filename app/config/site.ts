@@ -21,6 +21,11 @@ const SiteConfig = {
       name : "About",
       href : "/about"
     },
+    {
+      id : 4 ,
+      name : "Privacy Policy",
+      href : "/privacy-policy"
+    },
   ]
 };
 
