@@ -1,6 +1,6 @@
 import { MainSecType } from "../entities";
 
-export const MainSecData : MainSecType[] = [
+export const MainSecData: MainSecType[] = [
   {
     id: 1,
     imgurl: "/image/1.jpeg",
@@ -8,7 +8,7 @@ export const MainSecData : MainSecType[] = [
     desc: "Exploring the boundaries between human and machine in the neo-digital age.",
     category: "Technology",
     date: "2025.12.15",
-    readTime: "5 min"
+    readTime: "5 min",
   },
   {
     id: 2,
@@ -17,7 +17,7 @@ export const MainSecData : MainSecType[] = [
     desc: "How virtual reality is reshaping our understanding of space and design.",
     category: "Design",
     date: "2025.12.18",
-    readTime: "8 min"
+    readTime: "8 min",
   },
   {
     id: 3,
@@ -26,7 +26,7 @@ export const MainSecData : MainSecType[] = [
     desc: "The dawn of a new era in computational power and possibility.",
     category: "Science",
     date: "2025.12.19",
-    readTime: "6 min"
+    readTime: "6 min",
   },
   {
     id: 4,
@@ -35,77 +35,78 @@ export const MainSecData : MainSecType[] = [
     desc: "Can artificial intelligence achieve true sentience?",
     category: "AI",
     date: "2025.12.14",
-    readTime: "7 min"
-  }
+    readTime: "7 min",
+  },
 ];
+
 const StaticData = {
   others: [
     {
       id: 1,
-      title: "14 architectural design ideas for a spacious interior",
-      imgurl: "/1.avif",
+      title: "How Copenhagen's Green Roofs Are Cooling Cities",
+      imgurl: "/image/5.jpeg",
     },
     {
       id: 2,
-      title: "Each next stage of your life will demand you differently",
-      imgurl: "/2.avif",
+      title: "The Quiet Crisis of Digital Burnout in Remote Work",
+      imgurl: "/image/6.jpeg",
     },
     {
       id: 3,
-      title: "This bread pudding will give you all the feeling of fall",
-      imgurl: "/3.avif",
+      title: "Neural Implants Help Paralyzed Patients Type with Their Minds",
+      imgurl: "/image/7.jpeg",
     },
     {
       id: 4,
-      title: "I moved across the country and never looked back",
-      imgurl: "/4.avif",
+      title: "Why Japan Is Building Underwater Data Centers",
+      imgurl: "/image/8.jpeg",
     },
     {
       id: 5,
-      title: "3 meaningful ways to practice self-care as an introvert",
-      imgurl: "/5.avif",
+      title: "Solar Microgrids Powering Rural Africa in 2025",
+      imgurl: "/image/9.jpeg",
     },
     {
       id: 6,
-      title: "The rise of artificial intelligence and the future of humans",
-      imgurl: "/6.avif",
+      title: "AI Detects Early Parkinson's from Voice Patterns",
+      imgurl: "/image/10.jpeg",
     },
     {
       id: 7,
-      title: "This bread pudding will give you all the feeling of fall",
-      imgurl: "/3.avif",
+      title: "The Rise of 15-Minute Cities in Latin America",
+      imgurl: "/image/11.jpeg",
     },
     {
       id: 8,
-      title: "I moved across the country and never looked back",
-      imgurl: "/4.avif",
+      title: "How Finland Replaced Homework with Play-Based Learning",
+      imgurl: "/image/12.jpeg",
     },
     {
       id: 9,
-      title: "3 meaningful ways to practice self-care as an introvert",
-      imgurl: "/5.avif",
+      title: "Smart Grids Cut Blackouts by 70% in Puerto Rico",
+      imgurl: "/image/13.jpeg",
     },
     {
       id: 10,
-      title: "Each next stage of your life will demand you differently",
-      imgurl: "/2.avif",
+      title: "The Mental Health Toll of Climate Anxiety on Gen Z",
+      imgurl: "/image/14.jpeg",
     },
     {
       id: 11,
-      title: "This bread pudding will give you all the feeling of fall",
-      imgurl: "/3.avif",
+      title: "NASA and SpaceX Launch First Lunar Internet Satellite",
+      imgurl: "/image/15.jpeg",
     },
     {
       id: 12,
-      title: "14 architectural design ideas for a spacious interior",
-      imgurl: "/1.avif",
+      title: "Electric Ferries Are Cutting Emissions in Norway",
+      imgurl: "/image/16.jpeg",
     },
   ],
   news: {
-    title: "A practical rule of Schopenhauer for achieving a great goal",
-    imgurl: "/1.webp",
-    lead: "Schopenhauer's three rules of action may seem contradictory: keep the big picture in mind, but stay in the here and now. In fact, true to Eastern tendencies, Schopenhauer believed it was a call to live and work in a balanced way. .Imagine the cathedral you are building, but then focus on the brick you are building.",
-    body: "1- Keep the big picture in mind Some special days like your wedding day and your child's birthday party have a profound effect on your entire life. However, most days are relatively unremarkable. You colleagues, family and friends You see yourself. You work, you eat, you try to sleep on time. However, there are building blocks in a project that require you to spend a lot of time in any typical day : You can build your house a little, tear it down a little, or completely ignore it. To choose the first option, start each day by imagining your whole goal and desire to complete it Live up to that desire. Take a brief look at the day in the evening and you may realize where you fell short of your goal.",
+    title: "EU Passes World's First AI Liability Law in 2025",
+    imgurl: "/image/17.jpeg",
+    lead: "The European Union has enacted the Artificial Intelligence Liability Directive, holding developers accountable for harms caused by high-risk AI systems — a global first.",
+    body: "In a landmark move for digital rights, the EU has passed the Artificial Intelligence Liability Directive, effective January 2026. The law establishes a clear legal framework for victims of AI-related harm—such as biased hiring algorithms, faulty medical diagnostics, or autonomous vehicle crashes—to seek compensation.\n\nUnder the new rules, companies deploying high-risk AI must maintain detailed technical documentation and allow independent audits. Crucially, the burden of proof is partially reversed: if a victim can show an AI system was used and harm occurred, the developer must prove their system wasn’t at fault.\n\n“This isn’t about stifling innovation,” said EU Digital Commissioner Thierry Breton. “It’s about ensuring that as AI transforms our lives, human rights and safety remain non-negotiable.”\n\nTech giants and startups alike now face a 12-month compliance window. Meanwhile, the U.S. and India are drafting similar frameworks, signaling a potential global shift toward accountable AI.",
   },
 };
 
