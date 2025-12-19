@@ -2,6 +2,7 @@ import React from "react";
 import MainSec from "./components/MainSec";
 import OthersSections from "./components/OthersSections";
 import GridSection from "./components/GridSection";
+import LinearPostsShowcase from "./components/LinearPostsShowcase";
 
 const Home = () => {
   return (
@@ -15,6 +16,7 @@ const Home = () => {
         <div className="mx-auto max-w-7xl">
           <MainSec />
           <GridSection />
+          <LinearPostsShowcase />
           <OthersSections />
         </div>
       </main>

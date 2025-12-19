@@ -24,7 +24,7 @@ const GridSection = () => {
   }, []);
 
   return (
-    <div className="mt-10 px-4 sm:px-6 lg:px-8">
+    <div className="mt-6 sm:px-6 lg:px-8">
       <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
         {randomArticles.map((item) => (
           <div key={item.id} className="group relative cursor-pointer">
@@ -52,7 +52,7 @@ const GridSection = () => {
 
             {/* Title - Retro Terminal Text */}
             <div className="mt-3">
-              <p className="text-right font-mono text-xs font-bold leading-tight tracking-wide text-gray-200 drop-shadow-[0_0_6px_rgba(0,255,255,0.2)] transition-colors group-hover:text-teal-300 sm:text-sm">
+              <p className="font-mono text-xs font-bold leading-tight tracking-wide text-gray-200 drop-shadow-[0_0_6px_rgba(0,255,255,0.2)] transition-colors group-hover:text-teal-300 sm:text-sm">
                 {item.title}
               </p>
               <div className="mt-1 flex justify-between text-[10px] text-gray-400">
