@@ -4,15 +4,18 @@ import OthersSections from "./components/OthersSections";
 
 const Home = () => {
   return (
-    <div className="pt-2 bg-base-100">
-      <div className="grid grid-cols-12 px-5 md:px-10 gap-2">
-        <div className="col-span-0 md:col-span-1"></div>
-        <div className="col-span-12 md:col-span-10">
+    <div className="relative min-h-screen overflow-hidden bg-gray-950 text-gray-200">
+      {/* Optional: Global CRT grain/scanline (if not already in components) */}
+      {/* <div className="pointer-events-none absolute inset-0 bg-[repeating-linear-gradient(0deg,rgba(0,0,0,0.08)_1px,transparent_2px)]" /> */}
+
+      {/* Main Content */}
+      <main className="relative z-10 px-4 py-8 sm:px-6 sm:py-10 md:px-8">
+        {/* Centered max-width container */}
+        <div className="mx-auto max-w-7xl">
           <MainSec />
           <OthersSections />
         </div>
-        <div className="col-span-0 md:col-span-1"></div>
-      </div>
+      </main>
     </div>
   );
 };

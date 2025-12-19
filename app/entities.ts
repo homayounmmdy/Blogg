@@ -3,4 +3,7 @@ export type MainSecType = {
   title: string;
   imgurl: string;
   desc: string;
+  category?: string;
+  date?: string;
+  readTime?: string;
 };

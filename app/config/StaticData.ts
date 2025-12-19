@@ -3,16 +3,40 @@ import { MainSecType } from "../entities";
 export const MainSecData : MainSecType[] = [
   {
     id: 1,
-    title: "Top 10 books on the psychology of personality development",
-    imgurl: "/1.jpg",
-    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis, sequi animi! Alias, rem aspernatur. Hic dolor laborum vero harum sapiente nesciunt ratione nihil eos in doloremque facere recusandae praesentium,",
+    imgurl: "/image/1.jpeg",
+    title: "The Future of Cybernetic Enhancement",
+    desc: "Exploring the boundaries between human and machine in the neo-digital age.",
+    category: "Technology",
+    date: "2025.12.15",
+    readTime: "5 min"
   },
   {
     id: 2,
-    title: "A practical rule of Schopenhauer for achieving a great goal",
-    imgurl: "/1.webp",
-    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis, sequi animi! Alias, rem aspernatur. Hic dolor laborum vero harum sapiente nesciunt ratione nihil eos in doloremque facere recusandae praesentium,",
+    imgurl: "/image/2.jpeg",
+    title: "Neon Dreams: Digital Architecture",
+    desc: "How virtual reality is reshaping our understanding of space and design.",
+    category: "Design",
+    date: "2025.12.18",
+    readTime: "8 min"
   },
+  {
+    id: 3,
+    imgurl: "/image/3.jpeg",
+    title: "Quantum Computing Revolution",
+    desc: "The dawn of a new era in computational power and possibility.",
+    category: "Science",
+    date: "2025.12.19",
+    readTime: "6 min"
+  },
+  {
+    id: 4,
+    imgurl: "/image/4.jpeg",
+    title: "Neural Networks and Consciousness",
+    desc: "Can artificial intelligence achieve true sentience?",
+    category: "AI",
+    date: "2025.12.14",
+    readTime: "7 min"
+  }
 ];
 const StaticData = {
   others: [

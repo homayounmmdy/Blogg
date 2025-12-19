@@ -6,7 +6,7 @@ import SiteConfig from "../config/site";
 
 const Footer = () => {
   return (
-    <footer className="relative mt-20 overflow-hidden">
+    <footer className="relative overflow-hidden">
       {/* Neon glow background */}
       <div className="absolute inset-0 bg-gradient-to-t from-cyan-500/10 via-purple-500/10 to-transparent blur-3xl" />
       
