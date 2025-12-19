@@ -2,6 +2,7 @@ import StaticData from '@/app/config/StaticData';
 import React from 'react';
 import Image from "next/image";
 import Link from "next/link";
+import CommentsSection from '@/app/components/CommentsSection';
 
 const PostPage = () => {
   const data = StaticData.news;
@@ -41,19 +42,10 @@ const PostPage = () => {
           <div className="mb-10 px-2 font-mono text-[15px] leading-relaxed text-gray-300">
             <p>{data.body}</p>
           </div>
-
-          {/* System Status Bar */}
-          <div className="mb-8 flex justify-center">
-            <div className="inline-flex items-center space-x-2 rounded-sm border border-teal-400/30 bg-gray-900/80 px-4 py-2">
-              <div className="h-1.5 w-1.5 animate-pulse rounded-full bg-green-400" />
-              <span className="font-mono text-[12px] uppercase tracking-wider text-gray-300">
-                END OF TRANSMISSION
-              </span>
-            </div>
-          </div>
+          <CommentsSection />
 
           {/* Back to Home - Retro Control Button */}
-          <div className="flex justify-center">
+          <div className="mt-3 flex justify-center">
             <Link
               href="/"
               className="group relative inline-flex items-center justify-center overflow-hidden rounded-md border-2 border-teal-400 bg-gray-900 px-6 py-2 font-mono text-[13px] font-bold uppercase tracking-wider text-teal-300 transition-all duration-300 hover:border-teal-300 hover:text-teal-200"

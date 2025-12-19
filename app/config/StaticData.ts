@@ -39,6 +39,14 @@ export const MainSecData: MainSecType[] = [
   },
 ];
 
+export interface Comment {
+  id: number;
+  author: string;
+  avatar: string;
+  content: string;
+  timestamp: string; 
+}
+
 const StaticData = {
   others: [
     {
@@ -160,7 +168,30 @@ const StaticData = {
     date: "Jun 14, 2025",
     author: "Homayoun M.",
   },
+  // 👇 Add static comments
+  comments: [
+    {
+      id: 1,
+      author: "Alex R.",
+      avatar: "/avatar/1.webp",
+      content: "This is a monumental step toward ethical AI. The burden-of-proof shift is genius.",
+      timestamp: "3 hours ago",
+    },
+    {
+      id: 2,
+      author: "Dr. Lena K.",
+      avatar: "/avatar/2.webp",
+      content: "As an AI researcher, I welcome accountability—but implementation will be tricky.",
+      timestamp: "5 hours ago",
+    },
+    {
+      id: 3,
+      author: "M. Chen",
+      avatar: "/avatar/3.webp",
+      content: "Will this apply to open-source models too? The line between developer and user is blurry.",
+      timestamp: "1 day ago",
+    },
+  ] satisfies Comment[],
 };
-
 
 export default StaticData;
