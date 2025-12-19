@@ -1,31 +1,74 @@
-import StaticData from '@/app/config/StaticData'
-import React from 'react'
+import StaticData from '@/app/config/StaticData';
+import React from 'react';
 import Image from "next/image";
 import Link from "next/link";
 
 const PostPage = () => {
-    const data = StaticData.news
-    return (
-        <div className="pt-2 bg-base-100">
-            <div className="grid grid-cols-12 px-5 md:px-10 gap-2">
-                <div className="col-span-0 md:col-span-1"></div>
-                <div className="col-span-12 md:col-span-10">
-                    <div className='max-w-4xl mx-auto'>
+  const data = StaticData.news;
 
-                        <h1 className="text-brand-primary mb-4 mt-2 text-center text-3xl font-semibold tracking-tight dark:text-white lg:text-4xl lg:leading-snug">{data.title}</h1>
-                        <Image src={data.imgurl} width={900} height={500} className='rounded-xl aspect-video mx-auto' alt={data.title} title={data.title} />
-                        <div className='px-8 xl:px-5 py-5 lg:py-8'>
-                            <p>{data.body}</p>
-                        </div>
-                        <div className="mb-7 mt-7 flex justify-center">
-                            <Link className="bg-brand-secondary/20 rounded-full px-5 py-2 text-sm text-blue-600 dark:text-blue-500 " href="/">Back to home</Link>
-                        </div>
-                    </div>
-                </div>
-                <div className="col-span-0 md:col-span-1"></div>
+  return (
+    <div className="relative min-h-screen overflow-hidden bg-gray-950 text-gray-200">
+      {/* CRT Scanlines Overlay */}
+      <div className="pointer-events-none absolute inset-0 bg-[repeating-linear-gradient(0deg,rgba(0,0,0,0.12)_1px,transparent_2px,transparent_3px,rgba(0,255,255,0.04)_4px)]" />
+
+      {/* Circuit Grid (Subtle) */}
+      <div className="pointer-events-none absolute inset-0 opacity-5">
+        <div className="h-full w-full bg-[linear-gradient(rgba(0,255,255,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(0,255,255,0.1)_1px,transparent_1px)] bg-[size:60px_60px]" />
+      </div>
+
+      <main className="relative z-10 px-4 py-10 sm:px-6 md:px-8">
+        <div className="mx-auto max-w-3xl">
+          {/* Title - Terminal Header */}
+          <h1 className="mb-6 mt-4 text-center font-mono text-2xl font-bold uppercase tracking-wide text-teal-300 drop-shadow-[0_0_6px_rgba(0,255,255,0.4)] sm:text-3xl">
+            {data.title}
+          </h1>
+
+          {/* Featured Image */}
+          <div className="relative mb-8 overflow-hidden rounded-lg border border-teal-400/30">
+            {/* Scanlines over image */}
+            <div className="absolute inset-0 z-10 bg-[repeating-linear-gradient(0deg,rgba(0,0,0,0.1)_1px,transparent_2px,transparent_3px,rgba(0,255,255,0.03)_4px)] opacity-70" />
+            <Image
+              src={data.imgurl}
+              width={900}
+              height={500}
+              alt={data.title}
+              title={data.title}
+              className="contrast-110 h-auto w-full object-cover brightness-90"
+            />
+          </div>
+
+          {/* Post Body - Terminal Log Style */}
+          <div className="mb-10 px-2 font-mono text-[15px] leading-relaxed text-gray-300">
+            <p>{data.body}</p>
+          </div>
+
+          {/* System Status Bar */}
+          <div className="mb-8 flex justify-center">
+            <div className="inline-flex items-center space-x-2 rounded-sm border border-teal-400/30 bg-gray-900/80 px-4 py-2">
+              <div className="h-1.5 w-1.5 animate-pulse rounded-full bg-green-400" />
+              <span className="font-mono text-[12px] uppercase tracking-wider text-gray-300">
+                END OF TRANSMISSION
+              </span>
             </div>
-        </div>
-    )
-}
+          </div>
 
-export default PostPage
+          {/* Back to Home - Retro Control Button */}
+          <div className="flex justify-center">
+            <Link
+              href="/"
+              className="group relative inline-flex items-center justify-center overflow-hidden rounded-md border-2 border-teal-400 bg-gray-900 px-6 py-2 font-mono text-[13px] font-bold uppercase tracking-wider text-teal-300 transition-all duration-300 hover:border-teal-300 hover:text-teal-200"
+            >
+              {/* Glow on hover */}
+              <div className="absolute inset-0 bg-teal-400/10 opacity-0 transition-opacity group-hover:opacity-100" />
+              <span className="relative z-10 drop-shadow-[0_0_6px_rgba(0,255,255,0.4)]">
+                ← RETURN TO TERMINAL
+              </span>
+            </Link>
+          </div>
+        </div>
+      </main>
+    </div>
+  );
+};
+
+export default PostPage;
