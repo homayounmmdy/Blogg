@@ -7,8 +7,6 @@
 
 Perfect for tech writers, indie hackers, or anyone who believes the future looked cooler in 1984.
 
----
-
 ## 📋 Table of Contents
 
 - [✨ Features](#-features)
@@ -17,8 +15,6 @@ Perfect for tech writers, indie hackers, or anyone who believes the future looke
 - [🎨 Customization](#-customization)
 - [🤝 Contributing](#-contributing)
 - [📜 License](#-license)
-
----
 
 ## ✨ Features
 
