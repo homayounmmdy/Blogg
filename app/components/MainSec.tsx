@@ -3,7 +3,7 @@ import { MainSecData } from "../config/StaticData";
 
 const MainSec = () => {
   return (
-    <div className="relative overflow-hidden py-16">
+    <div className="relative overflow-hidden">
       {/* Retro Grid Background - Inspired by circuit boards */}
       <div className="pointer-events-none absolute inset-0 opacity-15">
         <div className="h-full w-full bg-[linear-gradient(rgba(0,255,255,0.2)_1px,transparent_1px),linear-gradient(90deg,rgba(0,255,255,0.2)_1px,transparent_1px)] bg-[size:60px_60px]" />
@@ -15,7 +15,7 @@ const MainSec = () => {
       {/* VHS-style Vignette */}
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_0%,rgba(0,0,0,0.6)_100%)]" />
 
-      <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div className="relative mx-auto max-w-7xl sm:px-6 lg:px-8">
         {/* Section Header - Retro Terminal Style */}
         <div className="mb-12 text-center">
           <div className="mb-4 inline-flex items-center space-x-3">

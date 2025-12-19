@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import React, { useState } from "react";
 import { FaGithub, FaBars, FaTimes } from "react-icons/fa";
 import SiteConfig from "../config/site";
@@ -8,24 +8,20 @@ const Navbar = () => {
 
   return (
     <div className="relative">
-      {/* Neon glow background */}
-      <div className="absolute inset-0 -z-10 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10 blur-3xl" />
-      
-      <nav className="relative border-b-2 border-cyan-400/50 bg-slate-900/80 shadow-[0_0_15px_rgba(34,211,238,0.3)] backdrop-blur-md">
+      {/* CRT Scanlines Overlay */}
+      <div className="pointer-events-none absolute inset-0 bg-[repeating-linear-gradient(0deg,rgba(0,0,0,0.12)_1px,transparent_2px,transparent_3px,rgba(0,255,255,0.04)_4px)]" />
+
+      <nav className="relative border-b border-teal-400/30 bg-gray-950/90 backdrop-blur-sm">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="flex h-20 items-center justify-between">
+          <div className="flex h-16 items-center justify-between">
             
-            {/* Logo */}
-            <a 
-              href="/" 
-              className="group relative"
-            >
-              <div className="absolute inset-0 bg-gradient-to-r from-cyan-400 to-purple-500 opacity-0 blur-lg transition-opacity duration-300 group-hover:opacity-75" />
-              <div className="clip-path-octagon relative flex items-center space-x-2 border-2 border-cyan-400 bg-slate-900 px-2 py-1 transition-all duration-300 hover:border-purple-400 md:px-4 md:py-2">
-                <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text font-black tracking-wider text-transparent md:text-2xl">
+            {/* Logo - Retro Terminal Badge */}
+            <a href="/" className="group relative">
+              <div className="flex items-center space-x-2 border border-teal-400 bg-gray-900 px-2.5 py-1">
+                <span className="font-mono text-lg font-bold uppercase tracking-wider text-teal-300 drop-shadow-[0_0_6px_rgba(0,255,255,0.4)]">
                   {SiteConfig.name}
                 </span>
-                <div className="h-2 w-2 animate-pulse rounded-full bg-cyan-400" />
+                <div className="h-1.5 w-1.5 animate-pulse rounded-full bg-green-400" />
               </div>
             </a>
 
@@ -35,29 +31,20 @@ const Navbar = () => {
                 <a
                   key={nav.id}
                   href={nav.href}
-                  className="group relative overflow-hidden px-6 py-2"
+                  className="group relative overflow-hidden px-4 py-2 font-mono text-[13px] uppercase tracking-wider text-gray-400 transition-colors hover:text-teal-300"
                 >
-                  {/* Animated background */}
-                  <div className="absolute inset-0 translate-x-[-100%] bg-gradient-to-r from-cyan-500/0 via-purple-500/20 to-pink-500/0 transition-transform duration-700 group-hover:translate-x-[100%]" />
+                  {/* Index badge */}
+                  <span className="text-teal-400/70">[{String(index + 1).padStart(2, '0')}]</span>
+                  <span className="ml-2">{nav.name}</span>
                   
-                  {/* Border effect */}
-                  <div className="absolute inset-0 border border-transparent transition-all duration-300 group-hover:border-cyan-400/50" />
-                  
-                  {/* Text */}
-                  <span className="relative text-sm font-bold uppercase tracking-widest text-gray-300 transition-colors duration-300 group-hover:text-cyan-400">
-                    {nav.name}
-                  </span>
-                  
-                  {/* Index number */}
-                  <span className="absolute right-1 top-0 font-mono text-[10px] text-cyan-400/50">
-                    {String(index + 1).padStart(2, '0')}
-                  </span>
+                  {/* Animated underline on hover */}
+                  <div className="absolute bottom-0 left-0 h-[1px] w-0 bg-teal-400 transition-all duration-300 group-hover:w-full" />
                 </a>
               ))}
             </div>
 
             {/* Right side buttons */}
-            <div className="flex items-center space-x-4">
+            <div className="flex items-center space-x-3">
               {/* GitHub Link */}
               <a
                 href="https://github.com/homayounmmdy"
@@ -65,22 +52,20 @@ const Navbar = () => {
                 rel="noopener noreferrer"
                 className="group relative"
               >
-                <div className="absolute inset-0 bg-cyan-400 opacity-0 blur-md transition-opacity duration-300 group-hover:opacity-50" />
-                <div className="relative border-2 border-cyan-400 bg-slate-900 p-1.5 transition-all duration-300 hover:border-purple-400 hover:shadow-[0_0_20px_rgba(34,211,238,0.5)] md:p-3">
-                  <FaGithub className="h-5 w-5 text-cyan-400 transition-colors duration-300 group-hover:text-purple-400" />
+                <div className="relative flex h-8 w-8 items-center justify-center rounded-sm border border-teal-400/50 bg-gray-900 transition-all hover:border-teal-300">
+                  <FaGithub className="h-4 w-4 text-teal-400 transition-colors group-hover:text-teal-300" />
                 </div>
               </a>
 
               {/* Mobile menu button */}
               <button
                 onClick={() => setIsMenuOpen(!isMenuOpen)}
-                className="group relative border-2 border-cyan-400 bg-slate-900 p-1.5 transition-all duration-300 hover:border-purple-400 md:p-3 lg:hidden"
+                className="group relative flex h-8 w-8 items-center justify-center rounded-sm border border-teal-400/50 bg-gray-900 lg:hidden"
               >
-                <div className="absolute inset-0 bg-cyan-400 opacity-0 blur-md transition-opacity duration-300 group-hover:opacity-50" />
                 {isMenuOpen ? (
-                  <FaTimes className="relative h-5 w-5 text-cyan-400" />
+                  <FaTimes className="h-4 w-4 text-teal-400" />
                 ) : (
-                  <FaBars className="relative h-5 w-5 text-cyan-400" />
+                  <FaBars className="h-4 w-4 text-teal-400" />
                 )}
               </button>
             </div>
@@ -90,36 +75,26 @@ const Navbar = () => {
         {/* Mobile Menu */}
         <div
           className={`lg:hidden overflow-hidden transition-all duration-500 ease-in-out ${
-            isMenuOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
+            isMenuOpen ? "max-h-60 opacity-100" : "max-h-0 opacity-0"
           }`}
         >
-          <div className="space-y-2 border-t border-cyan-400/30 bg-slate-900/95 px-4 pb-6 pt-2">
+          <div className="space-y-1 border-t border-teal-400/20 bg-gray-950/95 px-4 pb-4 pt-3">
             {SiteConfig.nav.map((nav, index) => (
               <a
                 key={nav.id}
                 href={nav.href}
-                className="group relative block"
+                className="group relative block font-mono text-[13px] uppercase tracking-wide text-gray-400"
                 onClick={() => setIsMenuOpen(false)}
               >
-                <div className="flex items-center justify-between border-l-4 border-transparent bg-slate-800/50 p-4 transition-all duration-300 group-hover:border-cyan-400 group-hover:bg-slate-800">
-                  <span className="text-sm font-bold uppercase tracking-widest text-gray-300 transition-colors duration-300 group-hover:text-cyan-400">
-                    {nav.name}
-                  </span>
-                  <span className="font-mono text-xs text-cyan-400/50">
-                    {String(index + 1).padStart(2, '0')}
-                  </span>
+                <div className="flex items-center justify-between border-l-2 border-transparent py-3 pl-4 pr-2 transition-colors group-hover:border-teal-400 group-hover:text-teal-300">
+                  <span>{nav.name}</span>
+                  <span className="text-teal-400/70">[{String(index + 1).padStart(2, '0')}]</span>
                 </div>
-                <div className="absolute bottom-0 left-0 h-[2px] w-0 bg-gradient-to-r from-cyan-400 to-purple-400 transition-all duration-500 group-hover:w-full" />
               </a>
             ))}
           </div>
         </div>
       </nav>
-
-      {/* Scanline effect */}
-      <div className="pointer-events-none absolute inset-0 opacity-5">
-        <div className="h-full w-full bg-[repeating-linear-gradient(0deg,rgba(34,211,238,0.1)_0px,transparent_1px,transparent_2px,rgba(34,211,238,0.1)_3px)]" />
-      </div>
     </div>
   );
 };
