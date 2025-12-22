@@ -203,16 +203,6 @@ const PostStaticPage = () => {
             </p>
           </div>
 
-          {/* System Status */}
-          <div className="mt-10 flex justify-center">
-            <div className="inline-flex items-center space-x-2 rounded-sm border border-teal-400/30 bg-gray-900/80 px-4 py-2">
-              <div className="h-1.5 w-1.5 animate-pulse rounded-full bg-green-400" />
-              <span className="font-mono text-[12px] uppercase tracking-wider text-gray-300">
-                ANALYTICS OFFLINE
-              </span>
-            </div>
-          </div>
-
           {/* Back to Post */}
           <div className="mt-8 flex justify-center">
             <Link
