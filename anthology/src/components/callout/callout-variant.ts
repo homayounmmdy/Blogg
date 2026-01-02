@@ -13,7 +13,7 @@ export const variants = cva(['p-4', 'rounded', 'border', 'shadow-md', 'space-y-4
     },
   },
   defaultVariants: {
-    type: 'default',
+    variant: 'default',
   },
 });
 
