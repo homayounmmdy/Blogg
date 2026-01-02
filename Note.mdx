@@ -1,2 +1,77 @@
 # Building Design System in Storybook 
 
+## Button 
+
+this is the world simplest story 
+
+```tsx
+
+import type { Meta, StoryObj } from '@storybook/react';
+import { Button } from './button';
+
+const meta = {
+  title: 'Button',
+  component: Button,
+} satisfies Meta;
+
+export default meta;
+type Story = StoryObj<typeof Button>;
+
+export const Primary: Story = {};
+
+
+```
+
+here also how can build multiply parts and customize each with the args.
+
+```tsx 
+
+export const Primary: Story = {
+  args: {
+    style: { backgroundColor: 'blue' },
+  },
+};
+
+export const Secondary: Story = {
+  args: {
+    children: 'Secondary',
+  },
+};
+
+```
+
+meta is sharing things across all the components like if you add args in meta it will add 
+into all other components if you set for component like Secondary it will use Secondary but for 
+the Primary that you don't set children it will use meta children 
+
+```tsx 
+import type { Meta, StoryObj } from '@storybook/react';
+import { Button } from './button';
+
+const meta = {
+  title: 'Button',
+  component: Button,
+  args : {
+    children : 'Button'
+  }
+} satisfies Meta;
+
+export default meta;
+type Story = StoryObj<typeof Button>;
+
+export const Primary: Story = {
+  args: {
+    style: { backgroundColor: 'blue' },
+  },
+};
+
+export const Secondary: Story = {
+  args: {
+    children: 'Secondary',
+  },
+};
+
+```
+
+
+
