@@ -6,7 +6,16 @@ const meta = {
   component: Button,
   args: {
     children: 'Button',
+    disabled : false
   },
+  argTypes: {
+    disabled : {
+      control : 'boolean'
+    },
+    variant : {
+      control : 'select'
+    }
+  }
 } satisfies Meta;
 
 export default meta;
