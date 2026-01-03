@@ -7,8 +7,8 @@ const OthersSections = () => {
     <>
       {/* Retro Posts Grid */}
       <div className="mt-12 grid gap-8 md:grid-cols-2 lg:gap-10 xl:grid-cols-3">
-        {StaticData.others.map((data) => (
-          <VerticalCard data={data} key={data.id} />
+        {StaticData.others.map((post) => (
+          <VerticalCard post={post} key={post.id} />
         ))}
       </div>
 

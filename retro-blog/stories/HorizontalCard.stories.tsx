@@ -9,7 +9,7 @@ const withBackground: Decorator = (Story) => (
 );
 
 const meta = {
-  title: "Cards/HorizontalCard",
+  title: "Posts/HorizontalCard",
   component: HorizontalCard,
   decorators: [withBackground],
   parameters: {
@@ -26,6 +26,6 @@ const sampleItem = StaticData.others[0];
 
 export const Default: Story = {
   args: {
-    item: sampleItem,
+    post: sampleItem,
   },
 };

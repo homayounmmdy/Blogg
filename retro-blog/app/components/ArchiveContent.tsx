@@ -73,7 +73,7 @@ export default function ArchiveContent() {
           ) : (
             <div className="mt-8 grid gap-8 md:grid-cols-2 lg:gap-10 xl:grid-cols-3">
               {filteredPosts.map((post) => (
-                <VerticalCard data={post} key={post.id} />
+                <VerticalCard post={post} key={post.id} />
               ))}
             </div>
           )}

@@ -9,7 +9,7 @@ const withBackground: Decorator = (Story) => (
 );
 
 const meta = {
-  title: "Cards/VerticalCard",
+  title: "Posts/VerticalCard",
   component: VerticalCard,
   decorators: [withBackground],
   parameters: {
@@ -28,12 +28,12 @@ const postWithNoCategory = StaticData.others[9];
 
 export const Default: Story = {
   args: {
-    data: sampleItem,
+    post: sampleItem,
   },
 };
 
 export const PostWithoutCategory : Story = {
   args: {
-    data: postWithNoCategory,
+    post: postWithNoCategory,
   },
 }
