@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { TextArea } from './text-area';
 
-import { userEvent, within, expect } from '@storybook/test';
+import {expect, userEvent, within } from '@storybook/test';
 
 const meta = {
   title: 'Components/TextArea',
@@ -48,3 +48,29 @@ const meta = {
 
 export default meta;
 type Story = StoryObj<typeof TextArea>;
+
+export const Default: Story = {
+  args: {},
+};
+
+export const Disabled: Story = {
+  args: {
+    disabled: true,
+  },
+};
+
+export const WithCount: Story = {
+  args: {
+    maxLength: 140,
+  },
+  play: async ({ canvasElement }) => {
+    const canvas = within(canvasElement);
+    const textArea = canvas.getByRole('textbox');
+    const count = canvas.getByTestId('length');
+
+    const inputValue = "Hello World"
+
+    await userEvent.type(textArea, inputValue);
+    expect(count).toHaveTextContent(inputValue.length.toString());
+  },
+};
