@@ -4,7 +4,7 @@ interface CardProps {
   id: number;
   title: string;
   imgurl: string;
-  category: string;
+  category?: string;
   readTime: string;
   date: string;
   author: string;

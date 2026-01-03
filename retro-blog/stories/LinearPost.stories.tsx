@@ -1,4 +1,4 @@
-import VerticalCard from "@/app/components/VerticalCard";
+import LinearPost from "@/app/components/LinearPost";
 import StaticData from "@/app/config/StaticData";
 import { Decorator, Meta, StoryObj } from "@storybook/nextjs";
 
@@ -9,8 +9,8 @@ const withBackground: Decorator = (Story) => (
 );
 
 const meta = {
-  title: "Cards/VerticalCard",
-  component: VerticalCard,
+  title: "Posts/LinearPost",
+  component: LinearPost,
   decorators: [withBackground],
   parameters: {
     backgrounds: {
@@ -20,20 +20,19 @@ const meta = {
 } satisfies Meta;
 
 export default meta;
-
-type Story = StoryObj<typeof VerticalCard>;
+type Story = StoryObj<typeof LinearPost>;
 
 const sampleItem = StaticData.others[0];
 const postWithNoCategory = StaticData.others[9];
 
 export const Default: Story = {
   args: {
-    data: sampleItem,
+    post: sampleItem,
   },
 };
 
 export const PostWithoutCategory : Story = {
   args: {
-    data: postWithNoCategory,
+    post: postWithNoCategory,
   },
 }

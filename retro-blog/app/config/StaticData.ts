@@ -148,7 +148,6 @@ const StaticData = {
       id: 10,
       title: "The Mental Health Toll of Climate Anxiety on Gen Z",
       imgurl: "/image/14.jpeg",
-      category: "Psychology",
       readTime: "4 min read",
       date: "Jun 12, 2025",
       author: "Homayoun M.",

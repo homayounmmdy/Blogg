@@ -3,11 +3,11 @@ import Link from "next/link";
 import React from "react";
 
 interface Props {
-   data:{
+  data: {
     id: number;
     title: string;
     imgurl: string;
-    category: string;
+    category?: string;
     readTime: string;
     date: string;
     author?: string;
@@ -39,13 +39,15 @@ const VerticalCard: React.FC<Props> = ({ data }: Props) => {
           </Link>
 
           {/* Category Badge */}
-          <div className="absolute bottom-3 left-3 z-20">
-            <div className="rounded-sm border border-teal-400 bg-gray-900/90 px-2 py-0.5 backdrop-blur-sm">
-              <span className="font-mono text-[10px] font-bold uppercase tracking-widest text-teal-300">
-                {data.category}
-              </span>
+          {data.category && (
+            <div className="absolute bottom-3 left-3 z-20">
+              <div className="rounded-sm border border-teal-400 bg-gray-900/90 px-2 py-0.5 backdrop-blur-sm">
+                <span className="font-mono text-[10px] font-bold uppercase tracking-widest text-teal-300">
+                  {data.category}
+                </span>
+              </div>
             </div>
-          </div>
+          )}
         </div>
       </div>
 
