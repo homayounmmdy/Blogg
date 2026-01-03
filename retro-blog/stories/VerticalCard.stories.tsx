@@ -1,4 +1,4 @@
-import HorizontalCard from "@/app/components/HorizontalCard";
+import VerticalCard from "@/app/components/VerticalCard";
 import StaticData from "@/app/config/StaticData";
 import { Decorator, Meta, StoryObj } from "@storybook/nextjs";
 
@@ -9,8 +9,8 @@ const withBackground: Decorator = (Story) => (
 );
 
 const meta = {
-  title: "Cards/HorizontalCard",
-  component: HorizontalCard,
+  title: "Cards/VerticalCard",
+  component: VerticalCard,
   decorators: [withBackground],
   parameters: {
     backgrounds: {
@@ -20,12 +20,13 @@ const meta = {
 } satisfies Meta;
 
 export default meta;
-type Story = StoryObj<typeof HorizontalCard>;
+
+type Story = StoryObj<typeof VerticalCard>;
 
 const sampleItem = StaticData.others[0];
 
 export const Default: Story = {
   args: {
-    item: sampleItem,
+    data: sampleItem,
   },
 };
