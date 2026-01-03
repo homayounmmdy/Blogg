@@ -9,7 +9,6 @@ export const TextArea = ({ label, required, maxLength, ...props }: TextAreaProps
   const tooLong = useMemo(() => isTooLong(value, maxLength), [value, maxLength]);
   const length = useMemo(() => getLength(value), [value]);
 
-  console.log({ label, required, maxLength, value, ...props });
 
   return (
     <label className="flex flex-col gap-1.5">
