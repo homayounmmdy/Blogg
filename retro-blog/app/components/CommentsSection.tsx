@@ -1,52 +1,34 @@
-import Image from "next/image";
-import StaticData from "../config/StaticData";
+
+import StaticData, { CommentType } from "../config/StaticData";
+import Comment from "./Comment";
 
 const CommentsSection = () => {
   return (
-    <>
-      <div className="mt-12">
-        <h2 className="mb-4 text-center font-mono text-xl font-bold uppercase tracking-wide text-teal-300 drop-shadow-[0_0_6px_rgba(0,255,255,0.4)]">
-          USER FEEDBACK LOG
-        </h2>
+    <section className="mx-auto mt-12 max-w-2xl px-4">
+      <h2 className="mb-6 text-center font-mono text-xl font-bold uppercase tracking-wider text-teal-300 drop-shadow-[0_0_8px_rgba(0,255,255,0.5)]">
+        USER FEEDBACK LOG
+      </h2>
 
-        <div className="space-y-6">
-          {StaticData.comments.map((comment) => (
-            <div
-              key={comment.id}
-              className="rounded-lg border border-teal-400/20 bg-gray-900/70 p-4 font-mono text-sm text-gray-200 backdrop-blur-sm"
-            >
-              <div className="flex items-start gap-3">
-                {/* Avatar - Retro Pixel or Glowing */}
-                <div className="relative h-8 w-8 overflow-hidden rounded-full border border-teal-400/30">
-                  <div className="absolute inset-0 animate-pulse bg-teal-400/10" />
-                  <Image
-                    src={comment.avatar}
-                    alt={`${comment.author} avatar`}
-                    width={32}
-                    height={32}
-                    className="h-full w-full object-cover"
-                  />
-                </div>
-
-                <div className="flex-1">
-                  <div className="flex items-baseline gap-2">
-                    <span className="font-bold text-teal-300">
-                      {comment.author}
-                    </span>
-                    <span className="text-xs text-gray-500">
-                      {comment.timestamp}
-                    </span>
-                  </div>
-                  <p className="mt-1 text-gray-300">{comment.content}</p>
-                </div>
-              </div>
-            </div>
-          ))}
-        </div>
-
-
+      <div className="space-y-6">
+        {StaticData.comments.map((comment: any) => (
+          <Comment key={comment.id} comment={comment} />
+        ))}
       </div>
-    </>
+
+      {/* Optional: Add comment form later */}
+      <div className="mt-8 rounded-lg border border-teal-400/20 bg-gray-900/50 p-4 font-mono text-sm backdrop-blur-sm">
+        <textarea
+          placeholder="Enter your feedback (RETRO-FUTURIST MODE: ON)"
+          className="w-full bg-transparent font-mono text-gray-200 placeholder-gray-600 focus:outline-none"
+          rows={2}
+        />
+        <div className="mt-2 flex justify-end">
+          <button className="rounded border border-teal-400/40 px-4 py-1.5 text-xs font-bold uppercase tracking-wider text-teal-300 transition hover:bg-teal-400/10">
+            POST
+          </button>
+        </div>
+      </div>
+    </section>
   );
 };
 

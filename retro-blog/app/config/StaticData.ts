@@ -39,12 +39,20 @@ export const MainSecData: MainSecType[] = [
   },
 ];
 
-export interface Comment {
-  id: number;
+export type UserRole = "user" | "admin" | "moderator";
+
+export interface CommentType {
+  id: string;
   author: string;
+  role: UserRole;
   avatar: string;
   content: string;
   timestamp: string;
+  likes: number;
+  dislikes: number;
+  liked?: boolean;
+  disliked?: boolean;
+  replies?: CommentType[];
 }
 
 export interface PostMetrics {
@@ -202,30 +210,86 @@ const StaticData = {
   },
   comments: [
     {
-      id: 1,
+      id: "1",
       author: "Alex R.",
-      avatar: "/avatar/1.webp",
+      role: "user",
+      avatar: "/avatar/1.png",
       content:
         "This is a monumental step toward ethical AI. The burden-of-proof shift is genius.",
       timestamp: "3 hours ago",
+      likes: 24,
+      dislikes: 2,
+      replies: [
+        {
+          id: "1-1",
+          author: "Homayoun",
+          role: "admin",
+          avatar: "/avatar/homayoun.webp",
+          content: "Thank you! We’re rolling out audit trails next week.",
+          timestamp: "2 hours ago",
+          likes: 18,
+          dislikes: 0,
+        },
+        {
+          id: "1-2",
+          author: "Luna M.",
+          role: "moderator",
+          avatar: "/avatar/4.png",
+          content:
+            "Careful—this could stifle indie devs if not scoped properly.",
+          timestamp: "1 hour ago",
+          likes: 9,
+          dislikes: 1,
+          replies: [
+            {
+              id: "1-2-1",
+              author: "Alex R.",
+              role: "user",
+              avatar: "/avatar/1.png",
+              content: "Fair point. Maybe tiered compliance?",
+              timestamp: "55 mins ago",
+              likes: 4,
+              dislikes: 0,
+            },
+          ],
+        },
+      ],
     },
     {
-      id: 2,
+      id: "2",
       author: "Dr. Lena K.",
-      avatar: "/avatar/2.webp",
+      role: "user",
+      avatar: "/avatar/2.png",
       content:
         "As an AI researcher, I welcome accountability—but implementation will be tricky.",
       timestamp: "5 hours ago",
+      likes: 31,
+      dislikes: 3,
     },
     {
-      id: 3,
+      id: "3",
       author: "M. Chen",
-      avatar: "/avatar/3.webp",
+      role: "user",
+      avatar: "/avatar/3.png",
       content:
         "Will this apply to open-source models too? The line between developer and user is blurry.",
       timestamp: "1 day ago",
+      likes: 42,
+      dislikes: 5,
+      replies: [
+        {
+          id: "3-1",
+          author: "NeuroLink",
+          role: "moderator",
+          avatar: "/avatar/5.png",
+          content: "Great question. We’re drafting OSS exemptions—stay tuned.",
+          timestamp: "22 hours ago",
+          likes: 27,
+          dislikes: 1,
+        },
+      ],
     },
-  ] satisfies Comment[],
+  ],
   authorProfile: {
     name: "Homayoun M.",
     avatar: "/avatar/homayoun.webp",
