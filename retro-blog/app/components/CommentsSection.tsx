@@ -1,5 +1,4 @@
-
-import StaticData, { CommentType } from "../config/StaticData";
+import StaticData from "../config/StaticData";
 import Comment from "./Comment";
 
 const CommentsSection = () => {
@@ -10,7 +9,7 @@ const CommentsSection = () => {
       </h2>
 
       <div className="space-y-6">
-        {StaticData.comments.map((comment: any) => (
+        {StaticData.comments.map((comment) => (
           <Comment key={comment.id} comment={comment} />
         ))}
       </div>
