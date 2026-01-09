@@ -44,7 +44,7 @@ const meta = {
       },
     },
   },
-} as Meta<typeof TextArea>;
+} satisfies Meta<typeof TextArea>;
 
 export default meta;
 type Story = StoryObj<typeof TextArea>;
