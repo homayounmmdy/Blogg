@@ -11,3 +11,12 @@ const meta = {
 
 export default meta;
 type Story = StoryObj<typeof Toggle>;
+
+export const Default: Story = {};
+export const Dark: Story = {
+  parameters: {
+    themes: {
+      themeOverride: 'dark',
+    },
+  },
+};
