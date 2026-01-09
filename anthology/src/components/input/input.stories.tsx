@@ -42,7 +42,39 @@ const meta = {
       },
     },
   },
-} as Meta<typeof Input>;
+} satisfies Meta<typeof Input>;
 
 export default meta;
 type Story = StoryObj<typeof Input>;
+
+export const Default: Story = {
+  args: {},
+};
+
+export const Disabled: Story = {
+  args: {
+    disabled: true,
+    placeholder: '',
+  },
+};
+
+export const WithDetail: Story = {
+  args: {
+    details: 'Lorem ipsum dolor sit',
+  },
+};
+
+export const WithoutLabel: Story = {
+  args: {
+    unlabeled: true,
+  },
+};
+
+export const Dark: Story = {
+  parameters: {
+    themes: {
+      themeOverride: 'dark',
+    },
+  },
+};
+
