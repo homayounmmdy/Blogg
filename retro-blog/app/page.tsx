@@ -5,7 +5,7 @@ import MainSec from "./components/MainSec";
 import OthersSections from "./components/OthersSections";
 import SectionHeader from "./components/SectionHeader";
 
-const Home = () => {
+const HomePage = () => {
   return (
     <div className="relative min-h-screen overflow-hidden bg-gray-950 text-gray-200">
       {/* Optional: Global CRT grain/scanline (if not already in components) */}
@@ -43,4 +43,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default HomePage;
