@@ -2,7 +2,7 @@ import Stat from "@/app/components/Stats";
 import { Meta, StoryObj } from "@storybook/nextjs";
 
 const meta = {
-  title: "Stat",
+  title: "Components/Stat",
   component: Stat,
   args: {
     size: "md",

@@ -2,7 +2,7 @@ import { Meta, StoryObj } from "@storybook/nextjs";
 import Badge from "../app/components/Badge";
 
 const meta = {
-  title: "Badge",
+  title: "Components/Badge",
   component: Badge,
   args: {
     variant: "primary",

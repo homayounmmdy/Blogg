@@ -2,7 +2,7 @@ import SectionHeader from "@/app/components/SectionHeader";
 import { Meta, StoryObj } from "@storybook/nextjs";
 
 const meta = {
-  title: "SectionHeader",
+  title: "Components/SectionHeader",
   component: SectionHeader,
 } satisfies Meta;
 

@@ -3,7 +3,7 @@ import StaticData from "@/app/config/StaticData";
 import { Meta, StoryObj } from "@storybook/nextjs";
 
 const meta = {
-  title: "Comment",
+  title: "Components/Comment",
   component: Comment,
 } satisfies Meta;
 
