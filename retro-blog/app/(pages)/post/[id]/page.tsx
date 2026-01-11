@@ -36,7 +36,7 @@ const SinglePostPage = () => {
             />
           </div>
 
-          {/* 👇 Author Post Info Section */}
+          
           <Link href="/post/1/author" className="mb-8 flex flex-col items-center rounded-lg border border-teal-400/20 bg-gray-900/70 p-5 backdrop-blur-sm sm:flex-row sm:items-start">
             <div className="relative mb-4 h-16 w-16 overflow-hidden rounded-full border-2 border-teal-400/40 sm:mb-0 sm:mr-5">
               <Image

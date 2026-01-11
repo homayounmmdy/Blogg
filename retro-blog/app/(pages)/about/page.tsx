@@ -1,5 +1,6 @@
 // app/about/page.tsx
 import Badge from "@/app/components/Badge";
+import CalloutWrapper from "@/app/components/CalloutWrapper";
 import Link from "next/link";
 
 const AboutPage = () => {
@@ -71,7 +72,7 @@ const AboutPage = () => {
           </div>
 
           {/* Author Note */}
-          <div className="mt-10 rounded-lg border border-teal-400/20 bg-gray-900/70 p-4 backdrop-blur-sm">
+          <CalloutWrapper className="mt-10">
             <p className="font-mono text-sm italic text-gray-400">
               &quot;This system is not connected to live data. All content is
               static—preserved for reference and inspiration.&quot;
@@ -79,7 +80,7 @@ const AboutPage = () => {
             <p className="mt-2 font-mono text-xs text-teal-400">
               — ARCHIVE MODE ACTIVE
             </p>
-          </div>
+          </CalloutWrapper>
 
           {/* System Status Bar */}
           <div className="mt-10 flex justify-center">

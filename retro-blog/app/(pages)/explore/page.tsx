@@ -1,6 +1,6 @@
-import React from 'react';
-import Link from 'next/link';
-import { pages } from '@/app/config/pages';
+import Callout from "@/app/components/Callout";
+import { pages } from "@/app/config/pages";
+import Link from "next/link";
 
 const ExplorePage = () => {
   return (
@@ -28,23 +28,7 @@ const ExplorePage = () => {
           {/* Page List */}
           <div className="space-y-5">
             {pages.map((page, index) => (
-              <div
-                key={index}
-                className="group rounded-lg border border-teal-400/15 bg-gray-900/60 p-4 backdrop-blur-sm transition-all hover:border-teal-400/30"
-              >
-                <Link
-                  href={page.href}
-                  className="block font-mono text-[15px] font-bold uppercase tracking-wide text-teal-300 no-underline transition-colors group-hover:text-teal-200"
-                >
-                  {page.title}
-                </Link>
-                <p className="mt-2 font-mono text-[13px] text-gray-400">
-                  {page.description}
-                </p>
-                <p className="mt-2 font-mono text-[11px] text-teal-400/80">
-                  → {page.href}
-                </p>
-              </div>
+              <Callout page={page} key={index} />
             ))}
           </div>
 

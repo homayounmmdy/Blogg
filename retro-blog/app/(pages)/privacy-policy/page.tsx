@@ -1,4 +1,5 @@
 import Badge from "@/app/components/Badge";
+import CalloutWrapper from "@/app/components/CalloutWrapper";
 import Link from "next/link";
 
 const PrivacyPolicyPage = () => {
@@ -105,7 +106,7 @@ const PrivacyPolicyPage = () => {
           </div>
 
           {/* Disclaimer */}
-          <div className="mt-10 rounded-lg border border-teal-400/20 bg-gray-900/70 p-4 backdrop-blur-sm">
+          <CalloutWrapper className="mt-10">
             <p className="font-mono text-sm italic text-gray-400">
               ⚠️ This is a generic privacy policy for demonstration purposes
               only. Consult a legal professional before deploying in production.
@@ -113,7 +114,7 @@ const PrivacyPolicyPage = () => {
             <p className="mt-2 font-mono text-xs text-teal-400">
               — NOT A LEGAL DOCUMENT
             </p>
-          </div>
+          </CalloutWrapper>
 
           {/* System Status Bar */}
           <div className="mt-10 flex justify-center">

@@ -1,4 +1,5 @@
 import Badge from "@/app/components/Badge";
+import CalloutWrapper from "@/app/components/CalloutWrapper";
 import Link from "next/link";
 
 const ContactPage = () => {
@@ -85,7 +86,7 @@ const ContactPage = () => {
           </div>
 
           {/* Alternative Contact */}
-          <div className="mt-12 rounded-lg border border-teal-400/20 bg-gray-900/70 p-4 backdrop-blur-sm">
+          <CalloutWrapper className="mt-12">
             <h3 className="font-mono text-sm font-bold uppercase text-teal-300">
               ALTERNATE CHANNELS
             </h3>
@@ -99,7 +100,7 @@ const ContactPage = () => {
                 <span className="text-teal-400">homayoun763@gmail.com</span>
               </li>
             </ul>
-          </div>
+          </CalloutWrapper>
 
           {/* System Status */}
           <div className="mt-10 flex justify-center">
