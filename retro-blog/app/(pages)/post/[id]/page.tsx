@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import CommentsSection from '@/app/components/CommentsSection';
 
-const PostPage = () => {
+const SinglePostPage = () => {
   const data = StaticData.news;
 
   return (
@@ -84,4 +84,4 @@ const PostPage = () => {
   );
 };
 
-export default PostPage;
+export default SinglePostPage;

@@ -2,7 +2,7 @@ import HomePage from "@/app/page";
 import { Meta, StoryObj } from "@storybook/nextjs";
 
 const meta = {
-  title: "Home Page",
+  title: "Pages/Home Page",
   component: HomePage,
 } satisfies Meta;
 export default meta;
