@@ -1,9 +1,6 @@
-// app/explore/page.tsx
 import React from 'react';
 import Link from 'next/link';
 import { pages } from '@/app/config/pages';
-
-
 
 const ExplorePage = () => {
   return (
