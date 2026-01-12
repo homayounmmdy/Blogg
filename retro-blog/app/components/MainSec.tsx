@@ -17,7 +17,7 @@ const MainSec = () => {
       {/* VHS-style Vignette */}
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_0%,rgba(0,0,0,0.6)_100%)]" />
 
-      <div className="relative mx-auto max-w-7xl sm:px-6 lg:px-8">
+      <div className="relative mx-auto max-w-7xl py-6 sm:px-6 lg:px-8">
         {/* Section Header - Retro Terminal Style */}
         <SectionHeader title="FEATURED POSTS"/>
 

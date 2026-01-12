@@ -6,7 +6,7 @@ const OthersSections = () => {
   return (
     <>
       {/* Retro Posts Grid */}
-      <div className="mt-12 grid gap-8 md:grid-cols-2 lg:gap-10 xl:grid-cols-3">
+      <div className="mt-6 grid gap-8 md:grid-cols-2 lg:gap-10 xl:grid-cols-3">
         {StaticData.others.map((post) => (
           <VerticalCard post={post} key={post.id} />
         ))}

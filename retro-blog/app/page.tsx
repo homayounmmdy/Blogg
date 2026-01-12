@@ -35,8 +35,11 @@ const HomePage = () => {
               </div>
             </div>
           </div>
+          <div className="pt-6">
+            
           <SectionHeader title="ALL POSTS"/>
           <OthersSections />
+          </div>
         </div>
       </main>
     </div>
