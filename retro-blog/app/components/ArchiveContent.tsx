@@ -4,6 +4,7 @@ import StaticData from "@/app/config/StaticData";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import { useEffect, useState } from "react";
 import Badge from "./Badge";
+import Heading from "./Heading";
 
 export default function ArchiveContent() {
   const searchParams = useSearchParams(); // ✅ Now inside Suspense
@@ -41,9 +42,9 @@ export default function ArchiveContent() {
         <div className="mx-auto max-w-7xl">
           {/* Header */}
           <div className="mb-10 text-center">
-            <h1 className="font-mono text-2xl font-bold uppercase tracking-wider text-teal-300 drop-shadow-[0_0_6px_rgba(0,255,255,0.4)] sm:text-3xl">
+            <Heading className="mb-6" size="xl" as="h1">
               ARCHIVE
-            </h1>
+            </Heading>
             <div className="mx-auto mt-4 max-w-2xl">
               <div className="relative">
                 <input

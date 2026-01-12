@@ -1,5 +1,6 @@
 import Badge from "@/app/components/Badge";
 import CalloutWrapper from "@/app/components/CalloutWrapper";
+import Heading from "@/app/components/Heading";
 import Link from "next/link";
 
 const PrivacyPolicyPage = () => {
@@ -15,10 +16,9 @@ const PrivacyPolicyPage = () => {
 
       <main className="relative z-10 px-4 py-10 sm:px-6 md:px-8">
         <div className="mx-auto max-w-3xl">
-          {/* Header */}
-          <h1 className="mb-8 mt-4 text-center font-mono text-2xl font-bold uppercase tracking-wide text-teal-300 drop-shadow-[0_0_6px_rgba(0,255,255,0.4)] sm:text-3xl">
+          <Heading className="mb-6" size="xl">
             PRIVACY PROTOCOL
-          </h1>
+          </Heading>
 
           {/* Intro */}
           <div className="mb-8 font-mono text-[15px] leading-relaxed text-gray-300">
@@ -34,9 +34,10 @@ const PrivacyPolicyPage = () => {
           {/* Policy Sections */}
           <div className="space-y-6 font-mono text-[15px] leading-relaxed text-gray-300">
             <section>
-              <h2 className="mb-2 font-bold uppercase text-teal-300">
+              
+              <Heading className="mb-2" textAlign="left">
                 1. Data Collection
-              </h2>
+              </Heading>
               <p>
                 This template does not include analytics, cookies, or tracking
                 scripts by default. If deployed as-is,{" "}
@@ -46,9 +47,9 @@ const PrivacyPolicyPage = () => {
             </section>
 
             <section>
-              <h2 className="mb-2 font-bold uppercase text-teal-300">
+              <Heading className="mb-2" textAlign="left">
                 2. Third-Party Services
-              </h2>
+              </Heading>
               <p>
                 If you integrate third-party services (e.g., comments,
                 analytics, ads), those services may collect data under their own
@@ -57,9 +58,9 @@ const PrivacyPolicyPage = () => {
             </section>
 
             <section>
-              <h2 className="mb-2 font-bold uppercase text-teal-300">
+              <Heading className="mb-2" textAlign="left">
                 3. Comments & User Input
-              </h2>
+              </Heading>
               <p>
                 The comment section in this template is{" "}
                 <span className="text-teal-300">
@@ -72,9 +73,9 @@ const PrivacyPolicyPage = () => {
             </section>
 
             <section>
-              <h2 className="mb-2 font-bold uppercase text-teal-300">
+              <Heading className="mb-2" textAlign="left">
                 4. Cookies
-              </h2>
+              </Heading>
               <p>
                 This template does not set cookies. If you add authentication,
                 preferences, or tracking, you must implement cookie consent
@@ -83,9 +84,9 @@ const PrivacyPolicyPage = () => {
             </section>
 
             <section>
-              <h2 className="mb-2 font-bold uppercase text-teal-300">
+              <Heading className="mb-2" textAlign="left">
                 5. Data Retention
-              </h2>
+              </Heading>
               <p>
                 No data = no retention. If you extend this template with user
                 accounts or forms, define clear retention policies and secure
@@ -94,9 +95,9 @@ const PrivacyPolicyPage = () => {
             </section>
 
             <section>
-              <h2 className="mb-2 font-bold uppercase text-teal-300">
+              <Heading className="mb-2" textAlign="left">
                 6. Policy Updates
-              </h2>
+              </Heading>
               <p>
                 As this is a static template, this policy does not auto-update.
                 Developers are responsible for maintaining compliance in their

@@ -1,12 +1,13 @@
 import StaticData from "../config/StaticData";
 import Comment from "./Comment";
+import Heading from "./Heading";
 
 const CommentsSection = () => {
   return (
     <section className="mx-auto mt-12 max-w-2xl px-4">
-      <h2 className="mb-6 text-center font-mono text-xl font-bold uppercase tracking-wider text-teal-300 drop-shadow-[0_0_8px_rgba(0,255,255,0.5)]">
+      <Heading className="mb-6">
         USER FEEDBACK LOG
-      </h2>
+      </Heading>
 
       <div className="space-y-6">
         {StaticData.comments.map((comment) => (

@@ -3,6 +3,7 @@ import React from 'react';
 import Image from "next/image";
 import Link from "next/link";
 import CommentsSection from '@/app/components/CommentsSection';
+import Heading from '@/app/components/Heading';
 
 const SinglePostPage = () => {
   const data = StaticData.news;
@@ -19,9 +20,9 @@ const SinglePostPage = () => {
       <main className="relative z-10 px-4 py-10 sm:px-6 md:px-8">
         <div className="mx-auto max-w-3xl">
           {/* Title - Terminal Header */}
-          <h1 className="mb-6 mt-4 text-center font-mono text-2xl font-bold uppercase tracking-wide text-teal-300 drop-shadow-[0_0_6px_rgba(0,255,255,0.4)] sm:text-3xl">
+          <Heading className='my-6' size='xl' as='h1'>
             {data.title}
-          </h1>
+          </Heading>
 
           {/* Featured Image */}
           <div className="relative mb-8 overflow-hidden rounded-lg border border-teal-400/30">

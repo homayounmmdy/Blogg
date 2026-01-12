@@ -1,5 +1,6 @@
 import Badge from "@/app/components/Badge";
 import CalloutWrapper from "@/app/components/CalloutWrapper";
+import Heading from "@/app/components/Heading";
 import Link from "next/link";
 
 const ContactPage = () => {
@@ -15,10 +16,9 @@ const ContactPage = () => {
 
       <main className="relative z-10 px-4 py-10 sm:px-6 md:px-8">
         <div className="mx-auto max-w-3xl">
-          {/* Header */}
-          <h1 className="mb-8 mt-4 text-center font-mono text-2xl font-bold uppercase tracking-wide text-teal-300 drop-shadow-[0_0_6px_rgba(0,255,255,0.4)] sm:text-3xl">
+          <Heading className="mb-6" size="xl" as="h1">
             CONTACT
-          </h1>
+          </Heading>
 
           {/* Intro */}
           <div className="mb-8 font-mono text-[15px] leading-relaxed text-gray-300">
